@@ -16,6 +16,7 @@ export const todoSlice = createSlice({
     addTodo: (state, action) => {
       if (state.list.length <= 13) {
         state.list.push(action.payload);
+        localStorage.setItem('todo', JSON.stringify(state.list));
         toast.success('success add todo');
       } else {
         toast.error('more than 13 is not possible');
@@ -23,6 +24,7 @@ export const todoSlice = createSlice({
     },
     removeTodo: (state, action) => {
       state.list = state.list.filter((item) => item.id !== action.payload);
+      localStorage.setItem('todo', JSON.stringify(state.list));
       toast.success('success remove todo');
     },
     editTodo: (state, action) => {
