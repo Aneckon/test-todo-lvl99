@@ -21,9 +21,9 @@ export const List = () => {
 
   const doneEdit = (id: number, name: string) => {
     if (valueEdit !== name || valueEdit.length !== name.length) {
-      dispatch(editTodo({ id: id, name: valueEdit }));
+      dispatch(editTodo({ id: id, name: valueEdit || name }));
+      setValueEdit('');
     }
-    setValueEdit('');
     setEditId(0);
   };
 
@@ -50,7 +50,7 @@ export const List = () => {
                   viewBox="0 -0.5 21 21"
                   version="1.1">
                   <defs></defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                     <g
                       id="Dribbble-Light-Preview"
                       transform="translate(-179.000000, -400.000000)"
