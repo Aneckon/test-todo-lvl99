@@ -31,6 +31,7 @@ export const todoSlice = createSlice({
       state.list = state.list.map((item) =>
         item.id === action.payload.id ? action.payload : item,
       );
+      localStorage.setItem('todo', JSON.stringify(state.list));
       toast.success('success edit todo');
     },
   },
