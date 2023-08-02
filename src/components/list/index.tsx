@@ -16,12 +16,14 @@ export const List = () => {
 
   const editTodoValue = (id: number) => {
     setEditId(id);
+    setValueEdit('');
   };
 
   const doneEdit = (id: number, name: string) => {
     if (valueEdit !== name || valueEdit.length !== name.length) {
       dispatch(editTodo({ id: id, name: valueEdit }));
     }
+    setValueEdit('');
     setEditId(0);
   };
 
