@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  height: 35px;
+
+  margin-bottom: 40px;
+
+  input {
+    width: calc(100% - 100px);
+    height: 100%;
+
+    padding: 0 15px;
+
+    border-radius: 50px 0 0 50px;
+
+    border: 1px solid #1f1f1f;
+    background: transparent;
+  }
+
+  button {
+    border-radius: 0px 50px 50px 0px;
+
+    background: #1f1f1f;
+
+    color: #fff;
+
+    height: 100%;
+    padding: 0 20px;
+  }
+}
